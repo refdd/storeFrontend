@@ -2,14 +2,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 
-// https://vite.dev/config/
 export default defineConfig({
+  base: "/", // IMPORTANT for Vercel to serve correct asset paths
   plugins: [react(), tailwindcss()],
-  // server: {
-  //   proxy: {
-  //     "/": {
-  //       target: "http://localhost:5000",
-  //     },
-  //   },
-  // },
 });
